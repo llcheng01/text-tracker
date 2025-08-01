@@ -1,0 +1,10 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "text-tracker:lib"
+
+    - path: "./app/DiffRunner.hs"
+      component: "text-tracker:exe:DiffRunner"
+
+    - path: "./app/TermProcessor.hs"
+      component: "text-tracker:exe:TermProcessor"

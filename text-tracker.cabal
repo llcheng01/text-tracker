@@ -1,0 +1,52 @@
+cabal-version:       >=1.10
+
+name:                text-tracker
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/llcheng01/text-tracker#readme
+license:             BSD-3-Clause
+license-file:        LICENSE
+author:              Juan Gomez
+maintainer:          juan.gomez7351@gmail.com
+copyright:           Juan Forever
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+                     CHANGELOG.md
+
+library
+  exposed-modules:     Diff, Terms
+  hs-source-dirs:      src
+  build-depends:       base >= 4.7 && < 5
+                     , text
+                     , algorithm-diff >= 1.0 && < 2.0
+                     , megaparsec >= 9.0 && < 10.0
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+                       -Wcompat
+                       -Widentities
+                       -Wincomplete-record-updates
+                       -Wincomplete-uni-patterns
+                       -Wmissing-export-lists
+                       -Wmissing-home-modules
+                       -Wpartial-fields
+                       -Wredundant-constraints
+
+executable DiffRunner
+  main-is:             DiffRunner.hs
+  hs-source-dirs:      app
+  build-depends:       base
+                     , text-tracker
+                     , text
+  default-language:    Haskell2010
+
+executable TermProcessor
+  main-is:             TermProcessor.hs
+  hs-source-dirs:      app
+  build-depends:       base
+                     , text-tracker
+                     , text
+  default-language:    Haskell2010
+
+  
