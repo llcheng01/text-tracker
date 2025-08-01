@@ -1,6 +1,11 @@
 module Main where
 
 import Diff (compareFiles)
+import System.Environment (getArgs)
 
 main :: IO ()
-main = compareFiles "notes/week1.md" "notes/week2.md"
+main = do
+    args <- getArgs
+    case args of
+        [f1, f2] -> compareFiles f1 f2
+        _ -> putStrLn "Usage: DiffRunner file1.md file2.md"

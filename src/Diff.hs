@@ -1,6 +1,6 @@
 module Diff (compareFiles) where
 
-import Data.Algorithm.Diff
+import Data.Algorithm.Diff (Diff(..), getGroupedDiff)
 import qualified Data.Text as T
 import qualified Data.Text.IO as TIO
 
